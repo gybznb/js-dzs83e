@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@latest/dist/L.Control.Locate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@latest/dist/L.Control.Locate.min.js"
+      charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div  id="radioDiv">
+	  <label><span style="margin-left:5px; font-size: 12px">请选择底图:</label> 
+  	<label >
+		  <input type="radio" name="ditu" value="Vector" checked='checked'>
+      <span style="margin-left:5px; font-size: 12px">矢量地图
+    	</label> 
+	  <label >
+		  <input type="radio" name="ditu" value="Image">
+      <span style="margin-left:5px; font-size: 12px">影像地图
+	  </label>
+  </div>
+
+  <div class="panel">
+    <div class="item">
+      <input type="checkbox" id="mian" checked />
+      <span style="margin-left:5px; font-size: 12px">矢量面</span>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="road" checked />
+      <span style="margin-left:5px; font-size: 12px">道路</span>
+    </div>
+  </div>
+
+
+  <div id="dingwei">
+  <button type="button" id="dingweibt">
+    <svg t="1687101567028" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6048" width="17.5" height="20"><path d="M469.333333 850.688A341.504 341.504 0 0 1 173.312 554.666667H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333334v-42.666666a21.333333 21.333333 0 0 1 21.333334-21.333334h66.645333A341.504 341.504 0 0 1 469.333333 173.312V106.666667a21.333333 21.333333 0 0 1 21.333334-21.333334h42.666666a21.333333 21.333333 0 0 1 21.333334 21.333334v66.645333A341.504 341.504 0 0 1 850.688 469.333333H917.333333a21.333333 21.333333 0 0 1 21.333334 21.333334v42.666666a21.333333 21.333333 0 0 1-21.333334 21.333334h-66.645333A341.504 341.504 0 0 1 554.666667 850.688V917.333333a21.333333 21.333333 0 0 1-21.333334 21.333334h-42.666666a21.333333 21.333333 0 0 1-21.333334-21.333334v-66.645333zM512 768a256 256 0 1 0 0-512 256 256 0 0 0 0 512z m0-128a128 128 0 1 1 0-256 128 128 0 0 1 0 256z" fill="#4A4A4A" p-id="6049" ></path></svg></button>
+  </div>
+
+  <div id="fuxuankuang">
+    <method="post">
+      <span style="font-size: 15px">寻找附近设施<br />
+        <select id="skills" name="skills">
+          <option value="park">公园</option>
+          <option value="shang">商场</option>
+          <option value="hosptial">医院</option>
+          <option value="pai">派出所</option>
+        </select><br/>
+        <button type="button" id="queding">确定</button>
+        <button type="button" id="hui">回到学校</button>
+  </div>
+
+</body>
+
+</html>>
